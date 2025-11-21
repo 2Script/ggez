@@ -11,18 +11,19 @@ namespace ggez::error {
 namespace ggez::error {
     enum code : code_t {
         none,
+        
+        connection_to_host_failed,
+        connection_to_host_timed_out,
+        session_initialization_failed,
+        network_initialization_failed,
+        network_data_send_failed,
+        invalid_data_size,
+        invalid_session_metadata,
+        invalid_network_data_id,
+        invalid_network_address,
 
-        invalid_session,      
-        invalid_player_handle,
-        player_index_out_of_bounds,  
-        prediction_threshold_reached, 
-        operation_unsupported,          
-        not_synchronized,     
-        in_rollback,          
-        input_dropped,        
-        player_disconnected,  
-        too_many_spectators,  
-        invalid_request,      
+        session_config_mismatch,
+        wrong_client_id_for_data,
 
         num_codes,
     };
